@@ -60,6 +60,7 @@ Data has no obvious relationships between it's features and target. Strongest co
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png" width="400" height="300">
 </p>
+
 - Most cardholders are of age between 38 and 62 years.
 - Distribution inside most numerous group is uneven with drop at 43 years.
 - There are no cardholders younger than 20 years. 
