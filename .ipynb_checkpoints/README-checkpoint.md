@@ -23,3 +23,32 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 5. Conclusion 
 
 ## Results
+
+
+
+
+## Customer Survival Analysis
+
+**Survival Analysis:** 
+Survival analysis is generally defined as a set of methods for analyzing data where the outcome variable is the time until the occurrence of an event of interest. The event can be death, occurrence of a disease, marriage, divorce, etc. The time to event or survival time can be measured in days, weeks, years, etc.
+
+For example, if the event of interest is heart attack, then the survival time can be the time in years until a person develops a heart attack.
+
+**Objective:**
+The objective of this analysis is to utilize non-parametric and semi-parametric methods of survival analysis to answer the following questions.
+- How the likelihood of the customer churn changes over time?
+- How we can model the relationship between customer churn, time, and other customer characteristics?
+- What are the significant factors that drive customer churn?
+- What is the survival and Hazard curve of a specific customer?
+- What is the expected lifetime value of a customer?
+
+**Kaplan-Meier Survival Curve:**
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/download.png" width="400" height="300">
+</p>
+
+From above graph, we can say that
+- AS expected, for telcom, churn is relatively low. The company was able to retain more than 60% of its customers even after 72 months.
+- There is a constant decrease in survival probability probability between 3-60 months.
+- After 60 months or 5 years, survival probability decreases with a higher rate. 
