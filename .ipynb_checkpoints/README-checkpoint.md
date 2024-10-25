@@ -52,7 +52,7 @@ Classification model performance is strongly dependent on balance of target clas
 </p>
 Data has no obvious relationships between it's features and target. Strongest correlation with target has feature amt.
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="600" height="450">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="800" height="600">
 </p>
 
 **Cardholders**
@@ -66,13 +66,13 @@ Data has no obvious relationships between it's features and target. Strongest co
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/9.png" width="400" height="300">
 </p>
-Amount of fraudulent transactions correlates to amount of cardholders, meaning age has no direct relation with target class.
+The age distribution is visibly different between 2 transaction types. In non-fraudulent transactions, there are 2 peaks at the age of 37-38 and 49-50, while in fraudulent transactions, the age distribution is a little smoother and the second peak includes a wider age group from 50-65. This does suggest that older people are potentially more prone to fraud.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/7.png" width="400" height="300">
 </p>
-There are more female cardholders than male. However amount of fraudulent transactions is equal between genders.
+In this case, we do not see a clear difference between both genders. Data seem to suggest that females and males are almost equally susceptible (50%) to transaction fraud. Gender is not very indicative of a fraudulent transaction.
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/15.png" width="600" height="450">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/15.png" width="600" height="500">
 </p>
 Fraudulent transactions are performed is different places, without clusters.
 
@@ -84,34 +84,35 @@ There are seasonal increases of total amount of transactions.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png" width="400" height="300">
 </p>
-Distribution of fraudulent transactions doesn't correlate to distribution of non-fraudulent transactions
+Distribution of fraudulent transactions doesn't correlate to distribution of non-fraudulent transactions. While normal payments peak in December and then March-July, fraudulent transactions are more concentrated in Jan-May. 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png" width="400" height="300">
 </p>
-Relative amount of non-fraudulent transactions increases during weekend while relative amount of fraudulent transactions increases during work week.
+Relative amount of non-fraudulent transactions increases on Monday and Sunday, while relative amount of fraudulent transactions is distributed more evenly.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png" width="400" height="300">
 </p>
 Most transactions are performed after 13:00
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png" width="400" height="300">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png" width="600" height="450">
 </p>
-Fraudulent transactions have peaks at 22-03 hours
+Non-fraudulent transactions are more or less evenly distributed, without noticeable peaks. Fraudulent transactions have peaks at 22-04 hours, when most people are asleep.
 
 **Transactions**
 On this graph only transactions less than 1000USD are displayed, due to big rane of amt and insignificant amount of such transactions
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/6.png" width="400" height="300">
 </p>
-Fraudulent transactions amount have specific peaks at certain amounts, which explains correlation with amt feature.
+While normal transactions tend to be around $200 or less, we see fraudulent transactions peak around $300 and then at the $800-$1000 range.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/8.png" width="600" height="300">
 </p>
-Spending category can be used for determining target class due to difference in distributions.
+Fraud tends to happen more often in 'Shopping_net', 'Grocery_pos', and 'misc_net' while 'home' and 'kids_pets' among others tend to see more normal transactions than fraudulent ones.
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="600" height="450">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="700" height="450">
 </p>
 Distribution of fraudulent and non-fraudulent transactions between different spending categories doesn't correlate, showing there are some preffered categories by scammers.
+
 ## Process
 1. 
 2. Preprocessing: Handling imbalanced data using SMOTE
