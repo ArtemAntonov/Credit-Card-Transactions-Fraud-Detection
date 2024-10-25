@@ -42,11 +42,12 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 ## Objectives:
 - Analyze the data of 1.3 million transactions
 - Find out hidden associations between fraud and transaction features
-- Perform feature generation and bala detect fraudent transactions
+- Perform feature generation and balance data for training classification models
+- Build a Machine Learning model to predict which previously purchased product will be in user’s next order
 
 ## Data exploration and visualization
 
-Classification model performance is strongly dependent on balance of target classes in data it is trained on. As the graph below shows, provided dataset has strongly imbalanced data. This problem will be addressed later, during preprocessing data for model training.
+Classification model performance is strongly dependant on balance of target classes in data it is trained on. As the graph below shows, provided dataset has strongly imbalanced data. This problem will be addressed later, during preprocessing data for model training.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="450" height="335">
 </p>
