@@ -40,9 +40,9 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 - Hyperparameter tuning: GridSearchCV and RandomizedSearchCV to optimize models.
 
 ## Objectives:
--Analyze the data of 1.3 million transactions
--Find out hidden associations between fraud and transaction features
--Perform feature generation and bala detect fraudent transactions
+- Analyze the data of 1.3 million transactions
+- Find out hidden associations between fraud and transaction features
+- Perform feature generation and bala detect fraudent transactions
 
 ## Data exploration and visualization
 
