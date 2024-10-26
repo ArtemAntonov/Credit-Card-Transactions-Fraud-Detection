@@ -48,13 +48,13 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 ## Data exploration and visualization
 
 Dataset has strongly imbalanced data, having only 6% positive observations.
-Amount of almost all tran sactions was less than 50$:
+Amount of almost all transactions was less than 50$:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="800" height="300">
 </p>
 Despite location features with obviously high correlation, transaction amount has significant correlation with target.
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="800" height="600">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="600" height="480">
 </p>
 
 **Cardholders**
