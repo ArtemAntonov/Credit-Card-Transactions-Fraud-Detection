@@ -47,11 +47,12 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 ## Data exploration and visualization
 
-Classification model performance is strongly dependant on balance of target classes in data it is trained on. As the graph below shows, provided dataset has strongly imbalanced data. This problem will be addressed later, during preprocessing data for model training.
+Dataset has strongly imbalanced data, having only 6% positive observations.
+Amount of almost all tran sactions was less than 50$:
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="450" height="335">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="800" height="300">
 </p>
-Data has no obvious relationships between it's features and target. Strongest correlation with target has feature amt.
+Despite location features with obviously high correlation, transaction amount has significant correlation with target.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="800" height="600">
 </p>
