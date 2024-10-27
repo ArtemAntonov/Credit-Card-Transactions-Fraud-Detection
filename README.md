@@ -47,74 +47,77 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 ## Data exploration and visualization
 
-Dataset has strongly imbalanced data, having only 6% positive observations.
+Dataset has strongly imbalanced data, having only 0.6% positive observations.
 Amount of almost all transactions was less than 50$:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="800" height="300">
 </p>
-Despite location features with obviously high correlation, transaction amount has significant correlation with target.
+Despite location features with obviously high correlation, transaction amount has significant correlation with target:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="600" height="480">
 </p>
 
 **Cardholders**
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png" width="400" height="300">
-</p>
 
 - Most cardholders are of age between 38 and 62 years.
 - Distribution inside most numerous group is uneven with drop at 43 years.
 - There are no cardholders younger than 20 years. 
 - Group 20-38 has same amount as group 62-100.
 <p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png" width="400" height="300">
+</p>
+The age distribution is visibly different between 2 transaction types. In non-fraudulent transactions, there are 2 peaks at the age of 37-38 and 49-50, while in fraudulent transactions, the age distribution is a little smoother and the second peak includes a wider age group from 50-65. This does suggest that older people are potentially more prone to fraud:
+<p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/9.png" width="400" height="300">
 </p>
-The age distribution is visibly different between 2 transaction types. In non-fraudulent transactions, there are 2 peaks at the age of 37-38 and 49-50, while in fraudulent transactions, the age distribution is a little smoother and the second peak includes a wider age group from 50-65. This does suggest that older people are potentially more prone to fraud.
+In this case, we do not see a clear difference between both genders. Data seem to suggest that females and males are almost equally susceptible (50%) to transaction fraud. Gender is not very indicative of a fraudulent transaction:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/7.png" width="400" height="300">
 </p>
-In this case, we do not see a clear difference between both genders. Data seem to suggest that females and males are almost equally susceptible (50%) to transaction fraud. Gender is not very indicative of a fraudulent transaction.
+Fraudulent transactions are performed is different places, without clusters:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/15.png" width="600" height="500">
 </p>
-Fraudulent transactions are performed is different places, without clusters.
 
-**Transaction time**
+**Time**
+
+There are seasonal increases of total amount of transactions:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/2.png" width="400" height="300">
 </p>
-There are seasonal increases of total amount of transactions.
+Distribution of fraudulent transactions doesn't correlate to distribution of non-fraudulent transactions. While normal payments peak in December and then March-July, fraudulent transactions are more concentrated in Jan-May:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png" width="400" height="300">
 </p>
-Distribution of fraudulent transactions doesn't correlate to distribution of non-fraudulent transactions. While normal payments peak in December and then March-July, fraudulent transactions are more concentrated in Jan-May. 
+Relative amount of non-fraudulent transactions increases on Monday and Sunday, while relative amount of fraudulent transactions is distributed more evenly:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png" width="400" height="300">
 </p>
-Relative amount of non-fraudulent transactions increases on Monday and Sunday, while relative amount of fraudulent transactions is distributed more evenly.
+
+Most transactions are performed after 13:00:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png" width="400" height="300">
 </p>
-Most transactions are performed after 13:00
+
+Non-fraudulent transactions are more or less evenly distributed, without noticeable peaks. Fraudulent transactions have peaks at 22-04 hours, when most people are asleep:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png" width="600" height="450">
 </p>
-Non-fraudulent transactions are more or less evenly distributed, without noticeable peaks. Fraudulent transactions have peaks at 22-04 hours, when most people are asleep.
 
 **Transactions**
-On this graph only transactions less than 1000USD are displayed, due to big rane of amt and insignificant amount of such transactions
+
+On this graph only transactions less than 1000USD are displayed, due to big rane of amt and insignificant amount of such transactions. While normal transactions tend to be around $200 or less, we see fraudulent transactions peak around $300 and then at the $800-$1000 range.
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/6.png" width="400" height="300">
 </p>
-While normal transactions tend to be around $200 or less, we see fraudulent transactions peak around $300 and then at the $800-$1000 range.
+Fraud tends to happen more often in 'Shopping_net', 'Grocery_pos', and 'misc_net' while 'home' and 'kids_pets' among others tend to see more normal transactions than fraudulent ones:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/8.png" width="600" height="300">
 </p>
-Fraud tends to happen more often in 'Shopping_net', 'Grocery_pos', and 'misc_net' while 'home' and 'kids_pets' among others tend to see more normal transactions than fraudulent ones.
+Distribution of fraudulent and non-fraudulent transactions between different spending categories doesn't correlate, showing there are some preffered categories by scammers:
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="700" height="450">
 </p>
-Distribution of fraudulent and non-fraudulent transactions between different spending categories doesn't correlate, showing there are some preffered categories by scammers.
 
 ## Process
 1. 
