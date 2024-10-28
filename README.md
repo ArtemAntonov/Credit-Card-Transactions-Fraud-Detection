@@ -54,7 +54,7 @@ Most transactions have value less than 100$, with most numerous group of less th
 </p>
 Despite location features with obviously high correlation, transaction amount has significant correlation with target:
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="600" height="480">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="300" height="240">
 </p>
 
 **Cardholders**
