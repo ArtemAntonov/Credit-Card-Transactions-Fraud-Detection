@@ -52,11 +52,11 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - All transactions made by cardholders from some cities and some zip codes were fraudulent.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png"/>
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/2.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="400" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/2.png" width="400" height="300"/>
 </p> 
 
-- Some states have clearly more fraudulent transactions than others. State DE has only frasudulent transactions.
+- Some states have clearly more fraudulent transactions than others. State DE has only fraudulent transactions.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png"/>
@@ -68,7 +68,7 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png"/>
 </p>
 
-- Representatives of certain jobs have onnly fraudulent transactions made.
+- Representatives of certain jobs have only fraudulent transactions made.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png"/>
