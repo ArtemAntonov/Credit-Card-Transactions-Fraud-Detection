@@ -49,7 +49,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 During Exploratory Data Analysis several important discoveries were done:<br>
 - Dataset has strongly imbalanced data, having only 0.6% positive observations.
-- All transactions made by cardholders from some cities and some zip codes were fraudulent.
+- All transactions made by cardholders from some cities and some zip codes were fraudulent. Not all of these zip codes belong to "fraudulent" cities.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="400" height="300"/>
