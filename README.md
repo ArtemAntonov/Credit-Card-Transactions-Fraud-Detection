@@ -1,11 +1,9 @@
 # Credit-Card-Transactions-Fraud-Detection
-## Project Overview
-  
-As online transactions increase, so does the risk of fraud, making effective detection systems crucial for financial institutions.
+### Project Overview
 
-In this project, we leverage various algorithms and data processing techniques to analyze transaction data and flag potential fraud. You will find detailed documentation on data preprocessing, model selection, and evaluation metrics to help you understand how these systems work in real-world applications.
+This project addresses the challenge of credit card fraud detection using machine learning techniques to identify suspicious transactions in real-time. With a highly imbalanced dataset, this project applies data balancing strategies, feature engineering, and hyperparameter tuning to enhance model precision.
 
-## Data
+### Data
 
 This project uses **[Credit Card Transactions Fraud Detection Dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection/data)**. This is a simulated credit card transaction dataset containing legitimate and fraud transactions from the duration 1st Jan 2019 - 31st Dec 2020. It covers credit cards of 1000 customers doing transactions with a pool of 800 merchants.
 
@@ -33,19 +31,21 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 - merch_long - Longitude Location of Merchant
 - is_fraud - Fraud Flag <--- Target Class
 
-## Methodology
+### Key Features
 - Data preprocessing: Handling missing values, scaling, and feature selection.
 - Model development: Implementation of various algorithms (Logistic Regression, Random Forest, XGBoost) for classification.
 - Model evaluation: Use of accuracy, precision, recall, F1-score, and ROC-AUC for performance assessment.
 - Hyperparameter tuning: GridSearchCV and RandomizedSearchCV to optimize models.
 
-## Objectives:
-- Analyze the data of 1.3 million transactions
-- Find out hidden associations between fraud and transaction features
-- Perform feature generation and balance data for training classification models
-- Build a Machine Learning model to predict which previously purchased product will be in user’s next order
+### Project Workflow:
+1. Data exploration and visualization
+2. Preprocessing: Handling imbalanced data, feature generation and selection
+3. Classification model training and testing
+4. Anomaly detection  model training and testing
+5. Evaluation and comparison of models
+6. Conclusion 
 
-## Data exploration and visualization
+### Data exploration and visualization
 
 During Exploratory Data Analysis several important discoveries were done:<br>
 - Dataset has strongly imbalanced data, having only 0.6% positive observations.
@@ -100,10 +100,3 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png"/>
 </p>
-
-## Process
-1. 
-2. Preprocessing: Handling imbalanced data using SMOTE
-3. Model training and testing
-4. Evaluation and comparison of models
-5. Conclusion 
