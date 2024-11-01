@@ -32,10 +32,10 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 - is_fraud - Fraud Flag <--- Target Class
 
 ### Key Features
-- Data preprocessing: Handling missing values, scaling, and feature selection.
-- Model development: Implementation of various algorithms (Logistic Regression, Random Forest, XGBoost) for classification.
-- Model evaluation: Use of accuracy, precision, recall, F1-score, and ROC-AUC for performance assessment.
-- Hyperparameter tuning: GridSearchCV and RandomizedSearchCV to optimize models.
+- **Data preprocessing:** Handling missing values, scaling, and feature selection.
+- **Model development:** Implementation of various algorithms (Logistic Regression, Random Forest, XGBoost) for classification.
+- **Model evaluation:** Use of accuracy, precision, recall, F1-score, and ROC-AUC for performance assessment.
+- **Hyperparameter tuning:** GridSearchCV and RandomizedSearchCV to optimize models.
 
 ### Project Workflow:
 1. Data exploration and visualization
