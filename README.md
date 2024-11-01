@@ -100,3 +100,27 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png"/>
 </p>
+
+- Transactions for category grocery_pos starting from some amount are fraudulent.
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png"/>
+</p>
+
+- Transactions of certain amounts are fraudulent among some age groups.
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png"/>
+</p>
+
+- In some states fraud transactions are made among holders of cards by specific issuers' industry codes.
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png"/>
+</p>
+
+- Depending on population, theres higher probability of fraud based on card issuer's industry code.
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png"/>
+</p>
