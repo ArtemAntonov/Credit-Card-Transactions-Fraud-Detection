@@ -45,7 +45,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 5. Evaluation and comparison of models
 6. Conclusion 
 
-### Data exploration and visualization
+### 1. Exploratory Data Analysis
 
 During Exploratory Data Analysis several important discoveries were done:<br>
 - Dataset has strongly imbalanced data, having only 0.6% positive observations.
