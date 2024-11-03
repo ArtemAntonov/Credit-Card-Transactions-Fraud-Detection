@@ -39,7 +39,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 ### Project Workflow:
 1. Data exploration and visualization
-2. Preprocessing: Handling imbalanced data, feature generation and selection
+2. Preprocessing: feature generation and selection, handling imbalanced data
 3. Classification model training and testing
 4. Anomaly detection  model training and testing
 5. Evaluation and comparison of models
