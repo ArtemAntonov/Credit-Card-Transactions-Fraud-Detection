@@ -41,7 +41,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 1. Data exploration and visualization
 2. Preprocessing: feature generation and selection, handling imbalanced data
 3. Classification model training and testing
-4. Anomaly detection  model training and testing
+4. Anomaly detection model training and testing
 5. Evaluation and comparison of models
 6. Conclusion 
 
@@ -124,3 +124,13 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png"/>
 </p>
+
+### 2. Preprocessing: feature generation and selection, handling imbalanced data
+
+### 3. Classification model training and testing
+
+### 4. Anomaly detection model training and testing
+
+### 5. Evaluation and comparison of models
+
+### 6. Conclusion 
