@@ -126,8 +126,8 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 ### 2. Preprocessing: feature generation and selection, handling imbalanced data
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" style="width: 50%; height: 50%"/>
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" style="width: 50%; height: 50%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" width="400" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" width="400" height="300"/>
 </p> 
 
 <p align="center">
