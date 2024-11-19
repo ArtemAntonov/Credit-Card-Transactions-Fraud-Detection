@@ -57,13 +57,13 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - Some states have clearly more fraudulent transactions than others. State DE has only fraudulent transactions.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png" style="width: 85%; height: 85%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png"/>
 </p>
 
 - In non-fraudulent transactions, there are 2 peaks at the age of 37-38 and 49-50, while in fraudulent transactions, the age distribution is a little smoother and the second peak includes a wider age group from 50-65. This does suggest that older people are potentially more prone to fraud.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png" style="width: 85%; height: 85%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png"/>
 </p>
 
 - Representatives of certain jobs have only fraudulent transactions made.
@@ -126,8 +126,8 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 ### 2. Preprocessing: feature generation and selection, handling imbalanced data
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" style="width: 70%; height: 70%"/>
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" style="width: 70%; height: 70%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" style="width: 50%; height: 50%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" style="width: 50%; height: 50%"/>
 </p> 
 
 <p align="center">
