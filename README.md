@@ -126,25 +126,26 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 ### 2. Preprocessing: feature generation and selection, handling imbalanced data
 
 Based on exploratory data analysis, initial dataset has been changed:
-- New features created: day, weekday, hour, industry_code and age
-- Not useful features were deleted: time, first, last, street, trans_num, unix_time, cc_num, dob, lat, long, merch_lat, merch_long, zip, city, job, merchant
-- Outliers were dropped or corrected by imputation with arbitrary value
+- New features created: day, weekday, hour, industry_code and age.
+- Not useful features were deleted: time, first, last, street, trans_num, unix_time, cc_num, dob, lat, long, merch_lat, merch_long, zip, city, job, merchant.
+- Outliers were dropped or corrected by imputation with arbitrary value.
 
-Resulting data set contained numeric and categorical features, which were treated separately. Categorical features were processed by MCA with 60 components resulting in approx. 90% variability saved. Numerical features were used for polynomial features generations of different degrees and tested for performance with logistic regression classifier. Best permorming set had degree 6 and was processed with PCA saving 99% of variance.
+Resulting data set contained numeric and categorical features, which were treated separately. Categorical features were processed by MCA with 60 components resulting in approx. 90% variability saved. Numerical features were used for polynomial features generation with different degrees and tested for performance with logistic regression classifier. Best permorming set had degree 6 and was processed with PCA saving 99% of variance.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" width="400" height="300"/>
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" width="400" height="300"/>
 </p> 
 
-To improve target class balance in the dataset, several sampling algorithms were tested by different models. On the plot below you can see sum of 4 scores(f1, accuracy, precision and recall) which can show overall performance over resampled data.
-NearMiss algorithm performed the worst. Surprisingly there was almost no big difference between EditedNearestNeighbours, another undersampling algorithm, no sampling and various oversampling. Data without any sampling performed the best.
+To improve target class balance in the dataset, several sampling algorithms were tested by different models. On the plot below you can see sum of 4 scores(f1, accuracy, precision and recall) which can show overall performance on resampled data.<br/>
+NearMiss algorithm performed the worst. Surprisingly there was no big difference between EditedNearestNeighbours, another undersampling algorithm, no sampling and various oversampling. Data without any sampling got best scores.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/22.png"/>
 </p>
 
-4 best performing on not resampled data classifiers were chosen for further model training: SVM, Nearest Neighbour, MLPC and Random Forest.
+4 best performing on not resampled data classifiers were chosen for further model training: SVM, Nearest Neighbour, MLPC and Random Forest.<br/>
+Plots below show train and test scores for data without sampling.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/23.png"/>
