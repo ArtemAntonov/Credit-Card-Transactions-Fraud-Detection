@@ -41,9 +41,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 1. Data exploration and visualization
 2. Preprocessing: feature generation and selection, handling imbalanced data
 3. Classification model training and testing
-4. Anomaly detection model training and testing
-5. Evaluation and comparison of models
-6. Conclusion 
+4. Conclusion 
 
 ### 1. Exploratory Data Analysis
 
@@ -59,13 +57,13 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - Some states have clearly more fraudulent transactions than others. State DE has only fraudulent transactions.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png" style="width: 75%; height: 75%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/3.png" style="width: 85%; height: 85%"/>
 </p>
 
 - In non-fraudulent transactions, there are 2 peaks at the age of 37-38 and 49-50, while in fraudulent transactions, the age distribution is a little smoother and the second peak includes a wider age group from 50-65. This does suggest that older people are potentially more prone to fraud.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png" style="width: 85%; height: 85%"/>
 </p>
 
 - Representatives of certain jobs have only fraudulent transactions made.
@@ -127,10 +125,19 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 
 ### 2. Preprocessing: feature generation and selection, handling imbalanced data
 
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" style="width: 70%; height: 70%"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" style="width: 70%; height: 70%"/>
+</p> 
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/22.png"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/23.png"/>
+</p>
+
 ### 3. Classification model training and testing
 
-### 4. Anomaly detection model training and testing
-
-### 5. Evaluation and comparison of models
-
-### 6. Conclusion 
+### 4. Conclusion 
