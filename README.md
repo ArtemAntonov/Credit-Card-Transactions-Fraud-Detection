@@ -153,6 +153,6 @@ Plots below show train and test scores for data without sampling.
 
 Data preparation pipeline including all steps for data preprocessing was created as a result of this section.
 
-### 3. Classification model training and testing
+### 3. Model training and testing
 
 ### 4. Conclusion 
