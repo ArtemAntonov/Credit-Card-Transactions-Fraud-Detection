@@ -69,7 +69,7 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - Representatives of certain jobs have only fraudulent transactions made.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="400" height="300"/>
 </p>
 
 - Some spending categories more frequently get fraudulent transactions, than others.
@@ -96,31 +96,31 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - More frauds are performed between 23:00 - 4:00, when most people sleep.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transaccations-Fraud-Detection/blob/main/img/10.png"/>
 </p>
 
 - Transactions for category grocery_pos starting from some amount are fraudulent.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png" width="460" height="300"/>
 </p>
 
 - Transactions of certain amounts are fraudulent among some age groups.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png" width="460" height="300"/>
 </p>
 
 - In some states fraud transactions are made among holders of cards by specific issuers' industry codes.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png" width="460" height="300"/>
 </p>
 
 - Depending on population, theres higher probability of fraud based on card issuer's industry code.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="460" height="300"/>
 </p>
 
 ### 2. Preprocessing: feature generation and selection, handling imbalanced data
