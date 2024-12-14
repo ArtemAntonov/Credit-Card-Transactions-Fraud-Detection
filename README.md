@@ -96,7 +96,7 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - More frauds are performed between 23:00 - 4:00, when most people sleep.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transaccations-Fraud-Detection/blob/main/img/10.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png"/>
 </p>
 
 - Transactions for category grocery_pos starting from some amount are fraudulent.
