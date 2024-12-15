@@ -117,13 +117,13 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png" width="460" height="300"/>
 </p>
 
-- Depending on population, theres higher probability of fraud based on card issuer's industry code.
+- Depending on population, there's higher probability of fraud based on card issuer's industry code.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="460" height="300"/>
 </p>
 
-### 2. Preprocessing: feature generation and selection, handling imbalanced data
+### 2. Preprocessing
 
 Based on exploratory data analysis, initial dataset has been changed:
 - New features created: day, weekday, hour, industry_code and age.
@@ -137,8 +137,8 @@ Resulting data set contained numeric and categorical features, which were treate
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" width="400" height="300"/>
 </p> 
 
-To improve target class balance in the dataset, several sampling algorithms were tested by different models. On the plot below you can see sum of 4 scores(f1, accuracy, precision and recall) which can show overall performance on resampled data.<br/>
-NearMiss algorithm performed the worst. Surprisingly there was no big difference between EditedNearestNeighbours, no sampling and various oversampling. Data without any sampling got best scores.
+To improve target class balance in the dataset, several sampling algorithms were tested by different models. Unfortunately no performance gain was achieved by any resampling method. Also, overfitting on test data was introduced by all resamplers, except EditedNearestNeighbours.<br/>
+Best scores were achieved on EditedNearestNeighbours processed data and data without resampling.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/22.png"/>
