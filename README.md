@@ -138,19 +138,13 @@ Resulting data set contained numeric and categorical features, which were treate
 </p> 
 
 To improve target class balance in the dataset, several sampling algorithms were tested by different models. Unfortunately no performance gain was achieved by any resampling method. Also, overfitting on test data was introduced by all resamplers, except EditedNearestNeighbours.<br/>
-Best scores were achieved on EditedNearestNeighbours processed data and data without resampling.
+Best scores were achieved on EditedNearestNeighbours processed data and data without resampling. Best performing models: Decision Tree, Nearest Neighbour, MLPC and Random Forest.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/22.png"/>
 </p>
 
-4 best performing on not resampled data classifiers were chosen for further model training: Decision Tree, Nearest Neighbour, MLPC and Random Forest.<br/>
-Plots below show train and test scores for data without sampling.
-
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/23.png"/>
-</p>
-
+Models showed slightly better results on data without resampling, so no resampling method was used further.<br/>
 Data preparation pipeline including all steps for data preprocessing was created as a result of this section.
 
 ### 3. Model training and testing
