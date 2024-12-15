@@ -149,9 +149,18 @@ Data preparation pipeline including all steps for data preprocessing was created
 
 ### 3. Model training and testing
 
+For best performing models from previous step hyperparameter tuning was performed.<br/>
+The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
+For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area.<br/>
+Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.<br/>
+Multi-layer Perceptron classifier showed the best results on test data.
+
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
 </p>
+
+The testing phase demonstrated that the model achieved 0.8455 f1 score and 0.9983 accuracy.
+
 
 ### 4. Conclusion 
 
