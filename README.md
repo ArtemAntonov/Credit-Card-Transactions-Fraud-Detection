@@ -149,4 +149,54 @@ Data preparation pipeline including all steps for data preprocessing was created
 
 ### 3. Model training and testing
 
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png"/>
+</p>
+
 ### 4. Conclusion 
+
+Created a project for iterative model experimentation and development,
+Performed initial feature preparation and pipelining,
+Trained a production-ready model,
+Deployed our model to a live-hosted endpoint and a batch pipeline that automatically updates.
+
+
+The Credit Card Transactions Fraud Detection project successfully addressed the critical challenge of identifying fraudulent credit card transactions through the application of machine learning techniques. Leveraging an imbalanced dataset, the project demonstrated how thoughtful preprocessing, exploratory data analysis, and model optimization can contribute to robust and reliable fraud detection systems.
+
+Key Findings
+
+Exploratory Data Analysis (EDA): The project revealed significant patterns and trends, such as:
+
+Fraudulent transactions were highly concentrated in certain cities, states, and zip codes.
+
+Older individuals (ages 50-65) were more prone to fraudulent transactions, highlighting potential demographic risks.
+
+Specific transaction amounts and categories were disproportionately linked to fraud.
+
+Scammers tended to act during late-night hours (23:00-4:00), emphasizing temporal patterns in fraudulent activities.
+
+Preprocessing Enhancements: The dataset was enriched and refined through feature engineering and dimensionality reduction:
+
+New features such as day, weekday, hour, industry code, and age were created.
+
+Unnecessary features were removed, and numeric and categorical data were treated independently to improve modeling efficiency.
+
+Polynomial feature generation and Lasso regression identified the top 60 features most predictive of fraud.
+
+Target Class Balancing: Several sampling methods, including Edited Nearest Neighbors (ENN), were evaluated to address the dataset's class imbalance. ENN showed promising results without introducing overfitting, making it a preferred method for balancing data in future applications.
+
+Model Evaluation: Models like Decision Tree, Nearest Neighbors, MLPC, and Random Forest emerged as top performers. Interestingly, the models performed slightly better on the unbalanced dataset, underscoring the importance of cautious resampling in fraud detection scenarios.
+
+Practical Contributions
+
+This project provided a reproducible workflow for fraud detection, including:
+
+A pipeline for feature selection and transformation.
+
+Clear identification of demographic and transactional risk factors.
+
+Insights into handling imbalanced datasets without compromising model integrity.
+
+Final Thoughts
+
+The methodologies and results of this project underscore the potential of machine learning in enhancing financial security. By analyzing patterns of fraudulent activity and optimizing detection strategies, this project contributes to the ongoing fight against financial fraud. Future work can build upon this solid foundation to create even more effective and scalable fraud prevention systems.
