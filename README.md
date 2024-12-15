@@ -40,7 +40,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 ### Project Workflow:
 1. Data exploration and visualization
 2. Preprocessing: feature generation and selection, handling imbalanced data
-3. Classification model training and testing
+3. Model training and testing
 4. Conclusion 
 
 ### 1. Exploratory Data Analysis
@@ -159,7 +159,7 @@ Repeated Stratified K-Fold cross validation was used to validate performance and
 </p>
 
 Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
-After hyperparameters tuning, the grand test on 100% unused previously data was performed. Trained model achieved 0.8408 f1 score and 0.9982 accuracy score, indicating its suitability for further usage.
+After hyperparameters tuning, the grand test on 100% previously unused data was performed. Trained model achieved 0.8408 F1 score and 0.9982 accuracy score, indicating its suitability for further usage.
 
 ### 4. Conclusion 
 
