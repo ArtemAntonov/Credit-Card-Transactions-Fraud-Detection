@@ -151,60 +151,17 @@ Data preparation pipeline including all steps for data preprocessing was created
 
 For best performing models from previous step hyperparameter tuning was performed.<br/>
 The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
-For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area.<br/>
+For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. F1 score was used for scoring.<br/>
 Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
 </p>
 
-Multi-layer Perceptron classifier showed the best results with 0.8455 f1 score and 0.9983 accuracy on test data.<br/>
+Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
 After hyperparameters tuning, the grand test on 100% unused previously data was performed. Trained model achieved 0.8408 f1 score and 0.9982 accuracy score, indicating its suitability for further usage.
 
 ### 4. Conclusion 
 
-Created a project for iterative model experimentation and development,
-Performed initial feature preparation and pipelining,
-Trained a production-ready model,
-Deployed our model to a live-hosted endpoint and a batch pipeline that automatically updates.
-
-
-The Credit Card Transactions Fraud Detection project successfully addressed the critical challenge of identifying fraudulent credit card transactions through the application of machine learning techniques. Leveraging an imbalanced dataset, the project demonstrated how thoughtful preprocessing, exploratory data analysis, and model optimization can contribute to robust and reliable fraud detection systems.
-
-Key Findings
-
-Exploratory Data Analysis (EDA): The project revealed significant patterns and trends, such as:
-
-Fraudulent transactions were highly concentrated in certain cities, states, and zip codes.
-
-Older individuals (ages 50-65) were more prone to fraudulent transactions, highlighting potential demographic risks.
-
-Specific transaction amounts and categories were disproportionately linked to fraud.
-
-Scammers tended to act during late-night hours (23:00-4:00), emphasizing temporal patterns in fraudulent activities.
-
-Preprocessing Enhancements: The dataset was enriched and refined through feature engineering and dimensionality reduction:
-
-New features such as day, weekday, hour, industry code, and age were created.
-
-Unnecessary features were removed, and numeric and categorical data were treated independently to improve modeling efficiency.
-
-Polynomial feature generation and Lasso regression identified the top 60 features most predictive of fraud.
-
-Target Class Balancing: Several sampling methods, including Edited Nearest Neighbors (ENN), were evaluated to address the dataset's class imbalance. ENN showed promising results without introducing overfitting, making it a preferred method for balancing data in future applications.
-
-Model Evaluation: Models like Decision Tree, Nearest Neighbors, MLPC, and Random Forest emerged as top performers. Interestingly, the models performed slightly better on the unbalanced dataset, underscoring the importance of cautious resampling in fraud detection scenarios.
-
-Practical Contributions
-
-This project provided a reproducible workflow for fraud detection, including:
-
-A pipeline for feature selection and transformation.
-
-Clear identification of demographic and transactional risk factors.
-
-Insights into handling imbalanced datasets without compromising model integrity.
-
-Final Thoughts
-
-The methodologies and results of this project underscore the potential of machine learning in enhancing financial security. By analyzing patterns of fraudulent activity and optimizing detection strategies, this project contributes to the ongoing fight against financial fraud. Future work can build upon this solid foundation to create even more effective and scalable fraud prevention systems.
+This project successfully demonstrates the application of machine learning techniques to address the challenge of credit card fraud detection. By employing rigorous exploratory data analysis, insightful patterns and anomalies were uncovered, contributing to a better understanding of fraud characteristics. Interestingly, the models performed better on unbalanced dataset, underscoring the importance of cautious resampling usage. A robust preprocessing pipeline was developed, incorporating feature engineering and advanced dimensionality reduction techniques.<br/>
+Through systematic evaluation and hyperparameter tuning, the Multi-Layer Perceptron Classifier emerged as the best-performing model, achieving an F1 score of 0.8408 and an accuracy of 99.82% on previously unseen test data. These results underline the model’s reliability and potential for real-time fraud detection in practical applications.
