@@ -149,13 +149,27 @@ Data preparation pipeline including all steps for data preprocessing was created
 
 ### 3. Model training and testing
 
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
+</p>
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/31.png" width="460" height="300"/>
+</p>
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/32.png" width="460" height="300"/>
+</p>
+
 For best performing models from previous step hyperparameter tuning was performed.<br/>
 The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
 For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. F1 score was used for scoring.<br/>
 Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/33.png" width="460" height="300"/>
+</p>
+
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="460" height="300"/>
 </p>
 
 Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
