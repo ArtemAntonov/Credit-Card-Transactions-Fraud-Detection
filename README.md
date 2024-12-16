@@ -182,7 +182,7 @@ After hyperparameters tuning, the grand test on 100% previously unused data was 
 A pipeline was developed, containing all data preprocessing steps and the estimator with highest score.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="353" height="409"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="176" height="204"/>
 </p>
 
 ### 4. Conclusion 
