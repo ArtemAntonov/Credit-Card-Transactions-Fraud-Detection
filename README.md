@@ -149,31 +149,41 @@ Data preparation pipeline including all steps for data preprocessing was created
 
 ### 3. Model training and testing
 
+For best performing models from previous step hyperparameter tuning was performed.<br/>
+The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
+For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. F1 score was used for scoring.<br/>
+Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.<br/><br/>
+
+KNeighbors classifier didn't show noticeable increase of F1 score after hyperparameters tuning. Combined with long training time it makes this model unsuitable for this project.
+
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
 </p>
+
+Decision Tree model showed minor improvement in comparison to baseline results. 
+
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/31.png" width="460" height="300"/>
 </p>
+
+Random Forest showed promising results.
+
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/32.png" width="460" height="300"/>
 </p>
 
-For best performing models from previous step hyperparameter tuning was performed.<br/>
-The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
-For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. F1 score was used for scoring.<br/>
-Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.
+Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
+After hyperparameters tuning, the grand test on 100% previously unused data was performed. Trained model achieved 0.8408 F1 score and 0.9982 accuracy score, indicating its suitability for further usage.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/33.png" width="460" height="300"/>
 </p>
 
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="460" height="300"/>
-</p>
+A pipeline was developed, containing all data preprocessing steps and the estimator with highest score.
 
-Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
-After hyperparameters tuning, the grand test on 100% previously unused data was performed. Trained model achieved 0.8408 F1 score and 0.9982 accuracy score, indicating its suitability for further usage.
+<p align="center">
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="353" height="409"/>
+</p>
 
 ### 4. Conclusion 
 
