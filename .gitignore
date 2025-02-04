@@ -6,3 +6,5 @@ saves/preprocessing_pipeline.dill
 saves/prediction_pipeline.dill
 saves/models_training/Nearest Neighbor_1.pkl
 saves/models_training/Nearest Neighbor_2.pkl
+saves/models_training/Random Forest_3.pkl
+saves/models_training/Random Forest_4.pkl

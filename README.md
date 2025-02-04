@@ -47,13 +47,6 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 During Exploratory Data Analysis several important discoveries were done:<br>
 - Dataset has strongly imbalanced data, having only 0.6% positive observations.
-- All transactions made by cardholders from some cities and some zip codes were fraudulent. Not all of these zip codes belong to "fraudulent" cities.
-
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/1.png" width="400" height="300"/>
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/2.png" width="400" height="300"/>
-</p> 
-
 - Some states have clearly more fraudulent transactions than others. State DE has only fraudulent transactions.
 
 <p align="center">
@@ -64,12 +57,6 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/4.png"/>
-</p>
-
-- Representatives of certain jobs have only fraudulent transactions made.
-
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/5.png" width="400" height="300"/>
 </p>
 
 - Some spending categories more frequently get fraudulent transactions, than others.
@@ -97,12 +84,6 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/10.png"/>
-</p>
-
-- Transactions for category grocery_pos starting from some amount are fraudulent.
-
-<p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/11.png" width="460" height="300"/>
 </p>
 
 - Transactions of certain amounts are fraudulent among some age groups.
@@ -144,48 +125,52 @@ Best scores were achieved on EditedNearestNeighbours processed data and data wit
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/22.png"/>
 </p>
 
-Models showed slightly better results on data without resampling, so no resampling method was used further.<br/>
+Resampling increased models' training time and introduced overfitting without noticeable improvement of F1 score, so no resampling method was used further.<br/>
 Data preparation pipeline including all steps for data preprocessing was created as a result of this section.
 
 ### 3. Model training and testing
 
-For best performing models from previous step hyperparameter tuning was performed.<br/>
+As the dataset has severe class imbalance, any model that always outputs "Not fraud" will score 99.4% accuracy. That's why F1 score was used during model training.<br/>
 The dataset was split into training and testing sets, with 75% of the data used for training.<br/>
-For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. F1 score was used for scoring.<br/>
-Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.<br/><br/>
+For initial detection of promising hyperparameters space HalvingGridSearchCV was used. Then GridSearchCV was used to select best hyperparameters from the area. <br/>
+Repeated Stratified K-Fold cross validation was used to validate performance and avoid overfitting.<br/>
+To track the progress, training results were stored in a dataframe and displayed as plots for each model with indication of iteration with best F1 score on test dataset. Grid search results were stored as well in order to allow retrieving trained models and analyze results of each grid search. Some files were too big for Github, so they were archived in "saves" folder.<br/><br/>
 
-KNeighbors classifier didn't show noticeable increase of F1 score after hyperparameters tuning. Combined with long training time it makes this model unsuitable for this project.
+KNeighbors classifier showed the biggest increase in F1 score after hyperparameters tuning - 0.0949, but it didn't even reach the scores of other models with default hyperparameters. 
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
 </p>
 
-Decision Tree model showed minor improvement in comparison to baseline results. 
+Decision Tree model achieved second result in F1 score increase during hyperparameters tuning(0.0393). Models were trained very fast, allowing performing of greater amount of experiments than for KNN. Unfortunately, the score of best iteration didn't reach base scores of Random Forest and MLPC.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/31.png" width="460" height="300"/>
 </p>
 
-Random Forest showed promising results.
+Random Forest showed lesser than previous models increase in F1 score during hyperparameters tuning  - 0.0203, but combined with high basic score of 0.8369 it showed the best result among trained models - 0.8572. Training models took significant time, reducing the amount of possible experiments(time limitation). The model F1 score reaction on hyperparameters' changes wasn't always linear, leaving possibility that better hyperparameters can be found.
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/32.png" width="460" height="300"/>
 </p>
 
-Multi-layer Perceptron classifier showed the best results with 0.8455 F1 score and 0.9983 accuracy on test data.<br/>
-After hyperparameters tuning, the grand test on 100% previously unused data was performed. Trained model achieved 0.8408 F1 score and 0.9982 accuracy score, indicating its suitability for further usage.
+Multi-layer Perceptron classifier showed same increase of F1 score after during tuning(0.0215), but it had lower initial score, so it couldn't outperform Random Forest, scoring max 0.8489 F1 score on test data. Best scoring model was neither the widest or the deepest among tested.<br/>
 
 <p align="center">
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/33.png" width="460" height="300"/>
 </p>
 
-A pipeline was developed, containing all data preprocessing steps and the estimator with highest score.
+After selecting the model with best performance(Random Forest of 11 iteration), a pipeline was developed, containing all data preprocessing steps and the selected classifier.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="247" height="286"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="350"/>
 </p>
+
+Developed pipeline was tested on 100% previously unuseen data, achieving 0.8003 F1 score.
 
 ### 4. Conclusion 
 
-This project successfully demonstrates the application of machine learning techniques to address the challenge of credit card fraud detection. By employing rigorous exploratory data analysis, insightful patterns and anomalies were uncovered, contributing to a better understanding of fraud characteristics. Interestingly, the models performed better on unbalanced dataset, underscoring the importance of cautious resampling usage. A robust preprocessing pipeline was developed, incorporating feature engineering and advanced dimensionality reduction techniques.<br/>
-Through systematic evaluation and hyperparameter tuning, the Multi-Layer Perceptron Classifier emerged as the best-performing model, achieving an F1 score of 0.8408 and an accuracy of 99.82% on previously unseen test data. These results underline the model’s reliability and potential for real-time fraud detection in practical applications.
+In this project a machine learning pipeline that combined preprocessing, feature engineering, dimensionality reduction and classification was created. This pipeline scored 0.8572 F1 score on test data and 0.8003 on unseed data.<br/>
+To handle class imbalance of data, several resampling(oversampling and undersampling) methods were used, but none of them showed improvement in models' scores. This shows that resampling doesn't always solve the problem of unbalanced data.<br/>
+Several models(KNN, Decision Tree, Random Forest, MLPC) had their hyperparameters tuned to find the best performer. Random Forest outperformed MLPC, indicating that deep learning models are not always an optimal solution.<br/>
+Among MLPC models, best performer didn't have the widest or biggest amount of hidden layers, showing that increasing this values doesn't automatically lead to better results.
