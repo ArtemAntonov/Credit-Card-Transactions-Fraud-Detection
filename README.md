@@ -89,19 +89,19 @@ During Exploratory Data Analysis several important discoveries were done:<br>
 - Transactions of certain amounts are fraudulent among some age groups.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/12.png" width="460"/>
 </p>
 
 - In some states fraud transactions are made among holders of cards by specific issuers' industry codes.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/13.png" width="460"/>
 </p>
 
 - Depending on population, there's higher probability of fraud based on card issuer's industry code.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/14.png" width="460"/>
 </p>
 
 ### 2. Preprocessing
@@ -114,8 +114,8 @@ Based on exploratory data analysis, initial dataset has been changed:
 Resulting data set contained numeric and categorical features, which were treated separately. Categorical features were processed by MCA with 68 components resulting in approx. 100% variability saved. Numerical features were used for polynomial features generation with different degrees and tested for performance with Lasso regression classifier. Best permorming set had degree 2. Top 60 most important features were selected using Lasso regression.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" width="400" height="300"/>
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" width="400" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/20.png" width="400"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/21.png" width="400"/>
 </p> 
 
 To improve target class balance in the dataset, several sampling algorithms were tested by different models. Unfortunately no performance gain was achieved by any resampling method. Also, overfitting on test data was introduced by all resamplers, except EditedNearestNeighbours.<br/>
@@ -139,31 +139,31 @@ To track the progress, training results were stored in a dataframe and displayed
 KNeighbors classifier showed the biggest increase in F1 score after hyperparameters tuning - 0.0949, but it didn't even reach the scores of other models with default hyperparameters. 
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/30.png" width="460"/>
 </p>
 
 Decision Tree model achieved second result in F1 score increase during hyperparameters tuning(0.0393). Models were trained very fast, allowing performing of greater amount of experiments than for KNN. Unfortunately, the score of best iteration didn't reach base scores of Random Forest and MLPC.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/31.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/31.png" width="460"/>
 </p>
 
 Random Forest showed lesser than previous models increase in F1 score during hyperparameters tuning  - 0.0203, but combined with high basic score of 0.8369 it showed the best result among trained models - 0.8572. Training models took significant time, reducing the amount of possible experiments(time limitation). The model F1 score reaction on hyperparameters' changes wasn't always linear, leaving possibility that better hyperparameters can be found.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/32.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/32.png" width="460"/>
 </p>
 
 Multi-layer Perceptron classifier showed same increase of F1 score after during tuning(0.0215), but it had lower initial score, so it couldn't outperform Random Forest, scoring max 0.8489 F1 score on test data. Best scoring model was neither the widest or the deepest among tested.<br/>
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/33.png" width="460" height="300"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/33.png" width="460"/>
 </p>
 
 After selecting the model with best performance(Random Forest of 11 iteration), a pipeline was developed, containing all data preprocessing steps and the selected classifier.
 
 <p align="center">
-<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="350"/>
+<img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="300"/>
 </p>
 
 Developed pipeline was tested on 100% previously unuseen data, achieving 0.8003 F1 score.
