@@ -1,7 +1,7 @@
 # Credit-Card-Transactions-Fraud-Detection
 ### Project Overview
 
-This project addresses the challenge of credit card fraud detection using machine learning techniques to identify suspicious transactions in real-time. With a highly imbalanced dataset, this project applies data balancing strategies, feature engineering, and hyperparameter tuning to enhance model precision.
+This project addresses the challenge of credit card fraud detection using machine learning techniques to identify suspicious transactions. With a highly imbalanced dataset, this project applies data balancing strategies, feature engineering, dimentionality reduction and hyperparameter tuning to enhance model precision.
 
 ### Data
 
@@ -32,13 +32,13 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 - is_fraud - Fraud Flag <--- Target Class
 
 ### Key Features
-- **Data preprocessing:** Handling outliers, feature generation, feature selection and scaling.
+- **Data preprocessing:** Handling outliers, feature generation, feature selection, dimentionality reduction and scaling.
 - **Model development:** Implementation of various algorithms for classification.
 - **Model evaluation:** Use of accuracy, precision, recall and F1-score for performance assessment.
 - **Hyperparameter tuning:**  HalvingSearchCV and GridSearchCV to optimize models.
 
 ### Project Workflow:
-1. Data exploration and visualization
+1. Exploratory Data Analysis
 2. Preprocessing: feature generation and selection, handling imbalanced data
 3. Model training and testing
 4. Conclusion 
@@ -46,7 +46,7 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 ### 1. Exploratory Data Analysis
 
 During Exploratory Data Analysis several important discoveries were done:<br>
-- Dataset has strongly imbalanced data, having only 0.6% positive observations.
+- Dataset has strongly imbalanced data, having less than 0.6% positive observations.
 - Some states have clearly more fraudulent transactions than others. State DE has only fraudulent transactions.
 
 <p align="center">
