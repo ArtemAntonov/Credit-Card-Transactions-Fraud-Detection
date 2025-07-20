@@ -156,11 +156,11 @@ After selecting the model with best performance(Random Forest of 11 iteration), 
 <img src="https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/blob/main/img/34.png" width="300"/>
 </p>
 
-Developed pipeline was tested on 100% previously unuseen data, achieving 0.8003 F1 score.
+Developed pipeline was tested on 100% previously unuseen data, achieving 0.8 F1 score.
 
 ### 4. Conclusion 
 
-In this project a machine learning pipeline that combined preprocessing, feature engineering, dimensionality reduction and classification was created. This pipeline scored 0.8572 F1 score on test data and 0.8003 on unseen data.<br/>
+In this project a machine learning pipeline that combined preprocessing, feature engineering, dimensionality reduction and classification was created. This pipeline scored 0.86 F1 score on test data and 0.8 on unseen data.<br/>
 To handle class imbalance of data, several resampling(oversampling and undersampling) methods were used, but none of them showed improvement in models' scores. This shows that resampling doesn't always solve the problem of unbalanced data.<br/>
 Several models(KNN, Decision Tree, Random Forest, MLPC) had their hyperparameters tuned to find the best performer. Random Forest outperformed MLPC, indicating that deep learning models are not always an optimal solution.<br/>
 Among MLPC models, best performer didn't have the widest or biggest amount of hidden layers, showing that increasing this values doesn't automatically lead to better results.

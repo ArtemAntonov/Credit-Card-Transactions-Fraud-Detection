@@ -8,3 +8,6 @@ saves/models_training/Nearest Neighbor_1.pkl
 saves/models_training/Nearest Neighbor_2.pkl
 saves/models_training/Random Forest_3.pkl
 saves/models_training/Random Forest_4.pkl
+/.vscode
+/fastapis/.ipynb_checkpoints
+/fastapis/__pycache__
