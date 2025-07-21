@@ -5,7 +5,8 @@
 # Credit-Card-Transactions-Fraud-Detection
 ### Project Overview
 
-This project tackles the challenge of detecting fraudulent credit card transactions using machine learning. It leverages feature engineering, dimensionality reduction(MCA and polynomial features), model selection(KNN, Decision Tree, Random Forest, MLP) and advanced hyperparameter optimization techniques like HalvingGridSearchCV to build a robust fraud detection system.
+This project tackles the challenge of detecting fraudulent credit card transactions using machine learning. It leverages feature engineering, dimensionality reduction, model selection(KNN, Decision Tree, Random Forest, MLP) and advanced hyperparameter optimization with HalvingGridSearchCV to build a robust fraud detection system.
+To make the model accessible, the project integrates a FastAPI application that serves predictions based on transaction data. The entire API is containerized with Docker, enabling easy deployment across environments.
 
 ### Data
 
@@ -43,6 +44,8 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 - **Model development:** Implementation of various algorithms for classification.
 - **Model evaluation:** Use of accuracy, precision, recall and F1-score for performance assessment.
 - **Hyperparameter tuning:**  HalvingSearchCV and GridSearchCV to optimize models.
+- **Deployment-ready API:** Real-time fraud prediction via a FastAPI-based REST API.
+- **Containerization:** Dockerized deployment for easy setup and portability across environments.
 
 ### Project Flow:
 1. [Exploratory Data Analysis](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#1-exploratory-data-analysis)
@@ -158,9 +161,31 @@ After selecting the model with best performance(Random Forest of 11 iteration), 
 
 Developed pipeline was tested on 100% previously unuseen data, achieving 0.8 F1 score.
 
-### 4. Conclusion 
+### 4. Model Deployment with FastAPI and Docker
+
+To make the fraud detection pipeline accessible via API, the project was extended with a simple FastAPI application, containerized using Docker.
+
+The FastAPI app is located in the deployment/ folder.
+Input: JSON with transaction features (same structure as in the original dataset)
+Output: Predicted class (fraud / non-fraud) and associated probability score
+
+To ensure portability and ease of deployment, the API is packaged in a Docker container and available on Docker Hub.
+Pull and run the container:
+
+```
+docker pull artemantonovdocker/credit-card-transactions-fraud-detection  
+docker run -d -p 8000:8000 artemantonovdocker/credit-card-transactions-fraud-detection 
+```
+Once running, the API will be accessible at:
+👉 http://localhost:8000
+
+Interactive API documentation (with sample requests) is available at:
+👉 http://localhost:8000/docs
+
+### 5. Conclusion 
 
 In this project a machine learning pipeline that combined preprocessing, feature engineering, dimensionality reduction and classification was created. This pipeline scored 0.86 F1 score on test data and 0.8 on unseen data.<br/>
 To handle class imbalance of data, several resampling(oversampling and undersampling) methods were used, but none of them showed improvement in models' scores. This shows that resampling doesn't always solve the problem of unbalanced data.<br/>
 Several models(KNN, Decision Tree, Random Forest, MLPC) had their hyperparameters tuned to find the best performer. Random Forest outperformed MLPC, indicating that deep learning models are not always an optimal solution.<br/>
-Among MLPC models, best performer didn't have the widest or biggest amount of hidden layers, showing that increasing this values doesn't automatically lead to better results.
+Among MLPC models, best performer didn't have the widest or biggest amount of hidden layers, showing that increasing this values doesn't automatically lead to better results.<br/>
+Finally, the trained pipeline was deployed via a FastAPI application, allowing real-time predictions from HTTP requests. The API was containerized with Docker and published on Docker Hub, enabling easy reuse and deployment on any system with Docker installed.

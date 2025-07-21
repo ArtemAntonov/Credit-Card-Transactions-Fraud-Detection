@@ -88,7 +88,8 @@ class Item(BaseModel):
     merch_long: float
 
 class Pred(BaseModel):
-    fraud: int
+    prediction: str  # predicted class of transaction(fraud/non-fraud)
+    probability: float  # probability of transaction being fraud
 
 app = FastAPI()
 
@@ -107,9 +108,10 @@ def predict(data: Annotated[Item, Body(openapi_examples=pred_examples)]): # type
     df = pd.DataFrame([data.model_dump()])    
     df['trans_date_trans_time'] = pd.to_datetime(df['trans_date_trans_time'])
     
-    prediction = pred_pipe.predict(df)
+    prediction = pred_pipe.predict_proba(df)[0][1]
     
-    return Pred(fraud=prediction[0])
+    return Pred(prediction='fraud' if round(prediction)==1 else 'non-fraud',
+                probability=round(prediction, 4))
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
