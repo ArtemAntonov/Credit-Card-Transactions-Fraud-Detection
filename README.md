@@ -5,7 +5,7 @@
 # Credit-Card-Transactions-Fraud-Detection
 ### Project Overview
 
-This project tackles the challenge of detecting fraudulent credit card transactions using machine learning. It leverages feature engineering, dimensionality reduction, model selection(KNN, Decision Tree, Random Forest, MLP) and advanced hyperparameter optimization with HalvingGridSearchCV to build a robust fraud detection system.
+This project tackles the challenge of detecting fraudulent credit card transactions using machine learning. It leverages feature engineering, dimensionality reduction, model selection(KNN, Decision Tree, Random Forest, MLP) and advanced hyperparameter optimization with HalvingGridSearchCV to build a robust fraud detection system.<br/>
 To make the model accessible, the project integrates a FastAPI application that serves predictions based on transaction data. The entire API is containerized with Docker, enabling easy deployment across environments.
 
 ### Data
@@ -176,10 +176,10 @@ Pull and run the container:
 docker pull artemantonovdocker/credit-card-transactions-fraud-detection  
 docker run -d -p 8000:8000 artemantonovdocker/credit-card-transactions-fraud-detection 
 ```
-Once running, the API will be accessible at:
+Once running, the API will be accessible at:<br/>
 👉 http://localhost:8000
 
-Interactive API documentation (with sample requests) is available at:
+Interactive API documentation (with sample requests) is available at:<br/>
 👉 http://localhost:8000/docs
 
 ### 5. Conclusion 
