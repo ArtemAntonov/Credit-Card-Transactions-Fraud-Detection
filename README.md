@@ -51,7 +51,8 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 1. [Exploratory Data Analysis](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#1-exploratory-data-analysis)
 2. [Preprocessing: feature generation and selection, handling imbalanced data](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#2-preprocessing)
 3. [Model training and testing](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#3-model-training-and-testing)
-4. [Conclusion](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#4-Conclusion)
+4. [Model Deployment](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#4-Model-Deployment)
+5. [Conclusion](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#5-Conclusion)
 
 ### 1. Exploratory Data Analysis
 
@@ -161,7 +162,7 @@ After selecting the model with best performance(Random Forest of 11 iteration), 
 
 Developed pipeline was tested on 100% previously unuseen data, achieving 0.8 F1 score.
 
-### 4. Model Deployment with FastAPI and Docker
+### 4. Model Deployment
 
 To make the fraud detection pipeline accessible via API, the project was extended with a simple FastAPI application, containerized using Docker.
 
