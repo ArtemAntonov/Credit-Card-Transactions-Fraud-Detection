@@ -49,10 +49,10 @@ This project uses **[Credit Card Transactions Fraud Detection Dataset](https://w
 
 ### Project Flow:
 1. [Exploratory Data Analysis](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#1-exploratory-data-analysis)
-2. [Preprocessing: feature generation and selection, handling imbalanced data](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#2-preprocessing)
-3. [Model training and testing](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#3-model-training-and-testing)
-4. [Model Deployment](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#4-Model-Deployment)
-5. [Conclusion](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#5-Conclusion)
+2. [Preprocessing](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#2-preprocessing)
+3. [Model Training and Testing](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#3-model-training-and-testing)
+4. [Model Deployment](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#4-model-deployment)
+5. [Conclusion](https://github.com/ArtemAntonov/Credit-Card-Transactions-Fraud-Detection/#5-conclusion)
 
 ### 1. Exploratory Data Analysis
 
@@ -166,8 +166,8 @@ Developed pipeline was tested on 100% previously unuseen data, achieving 0.8 F1 
 
 To make the fraud detection pipeline accessible via API, the project was extended with a simple FastAPI application, containerized using Docker.
 
-The FastAPI app is located in the deployment/ folder.
-Input: JSON with transaction features (same structure as in the original dataset)
+The FastAPI app is located in the deployment/ folder.<br/>
+Input: JSON with transaction features (same structure as in the original dataset)<br/>
 Output: Predicted class (fraud / non-fraud) and associated probability score
 
 To ensure portability and ease of deployment, the API is packaged in a Docker container and available on Docker Hub.
