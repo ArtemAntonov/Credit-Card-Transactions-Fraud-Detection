@@ -1,12 +1,20 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
+[![Hugging Face Space](https://img.shields.io/badge/HuggingFace-Demo-yellow?logo=huggingface)](https://artem-antonov-credit-card-transactions-fraud-detection.hf.space/docs)
 
 # Credit-Card-Transactions-Fraud-Detection
 ### Project Overview
 
 This project tackles the challenge of detecting fraudulent credit card transactions using machine learning. It leverages feature engineering, dimensionality reduction, model selection(KNN, Decision Tree, Random Forest, MLP) and advanced hyperparameter optimization with HalvingGridSearchCV to build a robust fraud detection system.<br/>
 To make the model accessible, the project integrates a FastAPI application that serves predictions based on transaction data. The entire API is containerized with Docker, enabling easy deployment across environments.
+
+### Demo/API Access
+You can try the model or access the API hosted on **Hugging Face Spaces**:
+👉 [Live API on Hugging Face](https://artem-antonov-credit-card-transactions-fraud-detection.hf.space)
+
+The API is built with **FastAPI**, and you can view the interactive Swagger docs here:
+👉 [API Docs (Swagger UI)](https://artem-antonov-credit-card-transactions-fraud-detection.hf.space/docs)
 
 ### Data
 
@@ -174,8 +182,8 @@ To ensure portability and ease of deployment, the API is packaged in a Docker co
 Pull and run the container:
 
 ```
-docker pull artemantonovdocker/credit-card-transactions-fraud-detection  
-docker run -d -p 8000:8000 artemantonovdocker/credit-card-transactions-fraud-detection 
+docker pull artemantonovdocker/credit-card-transactions-fraud-detection:latest  
+docker run -d -p 8000:8000 artemantonovdocker/credit-card-transactions-fraud-detection:latest
 ```
 Once running, the API will be accessible at:<br/>
 👉 http://localhost:8000
