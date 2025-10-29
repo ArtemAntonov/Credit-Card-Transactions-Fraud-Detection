@@ -10,10 +10,10 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 To make the model accessible, the project integrates a FastAPI application that serves predictions based on transaction data. The entire API is containerized with Docker, enabling easy deployment across environments.
 
 ### Demo/API Access
-You can try the model or access the API hosted on **Hugging Face Spaces**:
+You can try the model or access the API hosted on **Hugging Face Spaces**:<br/>
 👉 [Live API on Hugging Face](https://artem-antonov-credit-card-transactions-fraud-detection.hf.space)
 
-The API is built with **FastAPI**, and you can view the interactive Swagger docs here:
+The API is built with **FastAPI**, and you can view the interactive Swagger docs here:<br/>
 👉 [API Docs (Swagger UI)](https://artem-antonov-credit-card-transactions-fraud-detection.hf.space/docs)
 
 ### Data
